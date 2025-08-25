@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Pedalboard2PatchFile>
-  <Patch tempo="120" name="Mikle">
+  <Patch tempo="120" name="Balanced">
     <FILTERGRAPH>
       <FILTER uid="1" x="10" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
               program="0">
@@ -24,7 +24,7 @@
                 isInstrument="0" fileTime="0" numInputs="2" numOutputs="0"/>
         <STATE>0.</STATE>
       </FILTER>
-      <FILTER uid="4" x="96" y="72" uiLastX="0" uiLastY="0" windowOpen="0"
+      <FILTER uid="4" x="10" y="122" uiLastX="0" uiLastY="0" windowOpen="0"
               program="0">
         <PLUGIN name="OSC Input" descriptiveName="Dummy AudioProcessor so we can see at a glance which plugins have OSC mappings."
                 format="Internal" category="Internal" manufacturer="Niall Moody"
@@ -40,32 +40,32 @@
                 numInputs="0" numOutputs="0"/>
         <STATE>0.</STATE>
       </FILTER>
-      <FILTER uid="9" x="540" y="10" uiLastX="10" uiLastY="217" windowOpen="1"
+      <FILTER uid="9" x="540" y="10" uiLastX="10" uiLastY="217" windowOpen="0"
               program="0" oscMIDIAddress="">
         <PLUGIN name="reaxcomp-standalone" descriptiveName="ReaXcomp (ReaPlugs Edition)"
                 format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaxcomp-standalone.dll"
                 uid="72657863" isInstrument="0" fileTime="15204a50670" numInputs="2"
                 numOutputs="2"/>
-        <STATE>468.CMlaKA....fQBMDZ....AHWY3MF..P.S....A.............................................................................................................................................................................P.zfC...PA....K......fqAD........7+bclYlYlYl6Od.......n.D..........7....fk....E....DA...........zi.A........+OgAW2Gl2DP+yC.........A..........O....XI...PA....Q....vw7kC+xvfJP........v+ifYlYlYlYt+f+++++++eAP..........vC....VB...T....PD....zkwvP5So+BD........7+nSlYlYlYl6OB.......n.D..........7....fk....E....DA...........20.A........+O9nCnNwMLf9S9++++++OQ.A..........O....XI...PA....Q....D....P.....iIzLOmaBf+C.....</STATE>
+        <STATE>468.CMlaKA....fQBMDZ....AHWY3MF..P.S....A.............................................................................................................................................................................P.zfC...PA....K......fqAD........7+bclYlYlYl6Od.......n.D..........7....fk....E....DA...........zi.A........+OgAW2Gl2DP+yC.........A..........O....XI...PA....Q....vw7kC+xvfJP........v+iY6v6MCUq0+f+++++++eAP..........vC....VB...T....PD....zkwvP5So+BD........7+7zm1MNDCa7OB.......n.D..........7....fk....E....DA...........20.A........+O7Rnks7SG.+S9++++++OQ.A..........O....XI...PA....Q....D....P.....iIzLOmaBf+C.....</STATE>
       </FILTER>
-      <FILTER uid="12" x="364" y="10" uiLastX="581" uiLastY="22" windowOpen="1"
+      <FILTER uid="12" x="364" y="10" uiLastX="581" uiLastY="22" windowOpen="0"
               program="0" oscMIDIAddress="">
         <PLUGIN name="reaeq-standalone" descriptiveName="ReaEQ (ReaPlugs Edition)"
                 format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaeq-standalone.dll"
                 uid="72656571" isInstrument="0" fileTime="15204a5aa80" numInputs="2"
                 numOutputs="2"/>
-        <STATE>287.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................+EB...v..........D....PQA1ZHrFvT.MCwq8YxyG+OH.......v+S.A....D....POV7C1l6Nb.EwxTm9UXP.PM.......v+S.H....D....vDut8c6wIa.0xpnqdemZ9OL.........T.A....D.............7+D.....</STATE>
+        <STATE>287.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................+EB...v..........D....fl5WJ4mLVQ.8dI7iuijP+OI.......v+S.A....D....PduZK5ItBc.skpGTx6xm+OI.......v+S.H....D....fnt.+F7uzj.Eqa2BFw74+OI.........T.A....D.............7+D.....</STATE>
       </FILTER>
-      <FILTER uid="13" x="127" y="10" uiLastX="580" uiLastY="323" windowOpen="1"
+      <FILTER uid="13" x="127" y="10" uiLastX="580" uiLastY="323" windowOpen="0"
               program="0" oscMIDIAddress="">
         <PLUGIN name="reacomp-standalone" descriptiveName="ReaComp (ReaPlugs Edition)"
                 format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reacomp-standalone.dll"
                 uid="7265636d" isInstrument="0" fileTime="15204a5e900" numInputs="4"
                 numOutputs="2"/>
-        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................vO.zjy9Pjg2wynWq.OidsB7L50J.....vO.B..................ybPzb9C.M47O.B..7Lx0J3iJpt5O.B.......7Cf..POclX1</STATE>
+        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................fO.tIy9Pjg2wynWq.OidsB7L50J.....vO.B..................ybPzb9C.M4L.....7Lx0J.....vO.B..+.H..7Cf..fODy9S</STATE>
       </FILTER>
       <CONNECTION srcFilter="1" srcChannel="0" dstFilter="13" dstChannel="1"/>
       <CONNECTION srcFilter="1" srcChannel="1" dstFilter="13" dstChannel="0"/>
