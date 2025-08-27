@@ -47,7 +47,7 @@
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reacomp-standalone.dll"
                 uid="7265636d" isInstrument="0" fileTime="15204a5e900" numInputs="4"
                 numOutputs="2"/>
-        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................fOJueD9Pjg2wynWq.OidsB7L50J.....vO.B..................ybPzb5CfaxL.....7Lx0J3iJpt5O.B.......7Cf........</STATE>
+        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................vO.zjy9Pjg2wynWq.OidsB7L50J.....vO.B..................ybPzb9C.M4L.....7Lx0J.....vO.B..+.H..7Cf..vOwrCE</STATE>
       </FILTER>
       <CONNECTION srcFilter="1" srcChannel="0" dstFilter="13" dstChannel="1"/>
       <CONNECTION srcFilter="1" srcChannel="1" dstFilter="13" dstChannel="0"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Pedalboard2PatchFile>
-  <Patch tempo="120" name="New-II">
+  <Patch tempo="120" name="Offbeat">
     <FILTERGRAPH>
       <FILTER uid="1" x="10" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
               program="0">
@@ -49,22 +49,11 @@
                 numOutputs="2"/>
         <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................vO.zjy9Pjg2wynWq.OidsB7L50J.....vO.B..................ybPzb9C.M4L.....7Lx0J.....vO.B..+.H..7Cf..vOwrCE</STATE>
       </FILTER>
-      <FILTER uid="14" x="508" y="11" uiLastX="440" uiLastY="190" windowOpen="0"
-              program="0" oscMIDIAddress="">
-        <PLUGIN name="reaeq-standalone" descriptiveName="ReaEQ (ReaPlugs Edition)"
-                format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
-                file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaeq-standalone.dll"
-                uid="72656571" isInstrument="0" fileTime="15204a5aa80" numInputs="2"
-                numOutputs="2"/>
-        <STATE>320.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................fFB....A.........D....f7GNquUvyU.MlGXCp4nG.PpgVjsy2OD.T.H....D.....vbVAiZXff.A7a2BFw74+O9HFDXkCsA.T.H....D.....7yW5oXPXk.4BWY5BEMs8ORx146mZ7F.T.A....D.....lAo0oYuNr.IzIcYIPwT8Ot8SMdoaR3+S.A....D.............7+......</STATE>
-      </FILTER>
       <CONNECTION srcFilter="1" srcChannel="0" dstFilter="13" dstChannel="0"/>
       <CONNECTION srcFilter="1" srcChannel="1" dstFilter="13" dstChannel="1"/>
       <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="5" dstChannel="4096"/>
-      <CONNECTION srcFilter="13" srcChannel="0" dstFilter="14" dstChannel="0"/>
-      <CONNECTION srcFilter="13" srcChannel="1" dstFilter="14" dstChannel="1"/>
-      <CONNECTION srcFilter="14" srcChannel="0" dstFilter="3" dstChannel="0"/>
-      <CONNECTION srcFilter="14" srcChannel="1" dstFilter="3" dstChannel="1"/>
+      <CONNECTION srcFilter="13" srcChannel="0" dstFilter="3" dstChannel="0"/>
+      <CONNECTION srcFilter="13" srcChannel="1" dstFilter="3" dstChannel="1"/>
     </FILTERGRAPH>
     <Mappings/>
     <UserNames/>

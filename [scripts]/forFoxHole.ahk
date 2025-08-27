@@ -119,6 +119,11 @@ $!Space::
 	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
 return
 
+;move
+$!W::
+  Send, {W Down}
+Return
+
 ; Zoom 100%
 $CapsLock::
 	Send, {LControl Down}
