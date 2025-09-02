@@ -104,7 +104,7 @@ $^+RButton::
 return
 
 ; View 
-$MButton::
+$^+MButton::
 	Send, {LAlt Down}
 	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
 return
