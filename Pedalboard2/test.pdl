@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Pedalboard2PatchFile>
-  <Patch tempo="120" name="New-II">
+  <Patch tempo="120" name="test">
     <FILTERGRAPH>
       <FILTER uid="1" x="0" y="11" uiLastX="0" uiLastY="0" windowOpen="0" program="0">
         <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
@@ -46,16 +46,16 @@
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reacomp-standalone.dll"
                 uid="7265636d" isInstrument="0" fileTime="15204a5e900" numInputs="4"
                 numOutputs="2"/>
-        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................fOBsFy9jrrswynWq.OidsB7L50J.....vO.B..................ybPzb9C.M4L.....7Lx0J.....vO.B..+.H..7Cf..vOwrCE</STATE>
+        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................vO.zjy9jrrswynWq.OidsB7L50J.....vO.B..................ybPzb9Cf........7Lx0J.....vO.B..+.H..7Cf..vOwrCE</STATE>
       </FILTER>
-      <FILTER uid="14" x="608" y="11" uiLastX="440" uiLastY="190" windowOpen="1"
+      <FILTER uid="14" x="608" y="11" uiLastX="440" uiLastY="190" windowOpen="0"
               program="0" oscMIDIAddress="">
         <PLUGIN name="reaeq-standalone" descriptiveName="ReaEQ (ReaPlugs Edition)"
                 format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaeq-standalone.dll"
                 uid="72656571" isInstrument="0" fileTime="15204a5aa80" numInputs="2"
                 numOutputs="2"/>
-        <STATE>320.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................fFB....A.........D....flLqUL9aRU.4WUz6PpHX.PI.......P.T.H....D....fH8gQ1jTVZ.I99CpgVUV+OA.......P.T.H....D....PdoHhW.TMi.QH56CWI6N9OC.........T.A....D.....0GqZWG5Ur.E0xvk8HGO8OC.........T.A....D.............7+......</STATE>
+        <STATE>320.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................fFB....A.........D.....korqAKItV.c7eTuweRb.PE.......P.T.H....D.....iU69FG2ti.wrZMON31B.P3JGZQ1NeW+S.H....D.....DfC18mFer.oIWsvN+sp8Oz+++++++O.T.A....D.....HGaf.QIrz.kPEqlECLZ.PD.......P.T.A....D.............7+......</STATE>
       </FILTER>
       <CONNECTION srcFilter="1" srcChannel="0" dstFilter="13" dstChannel="0"/>
       <CONNECTION srcFilter="1" srcChannel="1" dstFilter="13" dstChannel="1"/>
