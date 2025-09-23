@@ -46,16 +46,16 @@
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reacomp-standalone.dll"
                 uid="7265636d" isInstrument="0" fileTime="15204a5e900" numInputs="4"
                 numOutputs="2"/>
-        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................fO.tIy9jrrswynWq.OidsB8LAc7B....vO.B..................ybPzb9C.M4L.....7Lx0J3Cf..vO.B..+.H..7Cf..vOwrCE</STATE>
+        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................vO.zjy9jrrswynWq.OidsB8LAc7B....vO.B..................ybPzb9C.M4L.....7Lx0J3Cf..vO.B..+.H..7Cf..vOwrCE</STATE>
       </FILTER>
-      <FILTER uid="14" x="608" y="11" uiLastX="440" uiLastY="190" windowOpen="0"
+      <FILTER uid="14" x="608" y="11" uiLastX="415" uiLastY="317" windowOpen="0"
               program="0" oscMIDIAddress="">
         <PLUGIN name="reaeq-standalone" descriptiveName="ReaEQ (ReaPlugs Edition)"
                 format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
                 file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaeq-standalone.dll"
                 uid="72656571" isInstrument="0" fileTime="15204a5aa80" numInputs="2"
                 numOutputs="2"/>
-        <STATE>320.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................fFB....A.........D....PDziGnBJmR.cSbzuKj8o.PE.......P.T.H....D.....vSWG9.b2X.cC+CpgVUV+OC.......P.T.H....D....PTZCGKM5Jk.Uk4dedAUg8OyNe+TiW5J.T.A....D...........f3v.A........+Oy+++++++O.T.A....D.............7+......</STATE>
+        <STATE>320.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................fFB....A.........D....PDziGnBJmR.cSbzuKj8o.PE.......P.T.H....D....vuSWG9.b2X.cC+CpgVUV+OC.......P.T.H....D.....UZCGKM5Jk.ck4dedAUg8OqNe+TiW5J.T.A....D...........f3v.A........+Oy+++++++O.T.A....D.............7+......</STATE>
       </FILTER>
       <CONNECTION srcFilter="1" srcChannel="0" dstFilter="13" dstChannel="0"/>
       <CONNECTION srcFilter="1" srcChannel="1" dstFilter="13" dstChannel="1"/>
