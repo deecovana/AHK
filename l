@@ -1,0 +1,46 @@
+QRes v1.1
+Copyright (C) Anders Kjersem.
+
+640x400, 32 bits @ 60 Hz.
+640x400, 32 bits @ 60 Hz.
+640x400, 32 bits @ 60 Hz.
+640x480, 32 bits @ 60 Hz.
+640x480, 32 bits @ 60 Hz.
+640x480, 32 bits @ 60 Hz.
+800x600, 32 bits @ 60 Hz.
+800x600, 32 bits @ 60 Hz.
+800x600, 32 bits @ 60 Hz.
+1024x768, 32 bits @ 60 Hz.
+1024x768, 32 bits @ 60 Hz.
+1024x768, 32 bits @ 60 Hz.
+1280x720, 32 bits @ 60 Hz.
+1280x720, 32 bits @ 60 Hz.
+1280x720, 32 bits @ 60 Hz.
+1280x768, 32 bits @ 60 Hz.
+1280x768, 32 bits @ 60 Hz.
+1280x768, 32 bits @ 60 Hz.
+1280x800, 32 bits @ 60 Hz.
+1280x800, 32 bits @ 60 Hz.
+1280x800, 32 bits @ 60 Hz.
+1280x1024, 32 bits @ 60 Hz.
+1280x1024, 32 bits @ 60 Hz.
+1280x1024, 32 bits @ 60 Hz.
+1360x768, 32 bits @ 60 Hz.
+1360x768, 32 bits @ 60 Hz.
+1360x768, 32 bits @ 60 Hz.
+1366x768, 32 bits @ 60 Hz.
+1366x768, 32 bits @ 60 Hz.
+1366x768, 32 bits @ 60 Hz.
+1400x1050, 32 bits @ 60 Hz.
+1400x1050, 32 bits @ 60 Hz.
+1400x1050, 32 bits @ 60 Hz.
+1440x900, 32 bits @ 60 Hz.
+1440x900, 32 bits @ 60 Hz.
+1440x900, 32 bits @ 60 Hz.
+1600x900, 32 bits @ 60 Hz.
+1600x900, 32 bits @ 60 Hz.
+1600x900, 32 bits @ 60 Hz.
+1680x1050, 32 bits @ 60 Hz.
+1680x1050, 32 bits @ 60 Hz.
+1680x1050, 32 bits @ 60 Hz.
+1920x1080, 32 bits @ 60 Hz.
