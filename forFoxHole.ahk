@@ -121,6 +121,7 @@ return
 
 ;move
 $!W::
+  SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
   Send, {W Down}
 Return
 
