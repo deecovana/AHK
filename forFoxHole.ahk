@@ -125,7 +125,7 @@ $!W::
 Return
 
 ; Zoom 100%
-$CapsLock::
+$^CapsLock::
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
 	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
@@ -142,7 +142,7 @@ $CapsLock::
 return
 
 ; Release all keys
-$BackSpace::
+$^BackSpace::
 	Send, {BackSpace}
 	SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
 	Send, {LShift Up}
