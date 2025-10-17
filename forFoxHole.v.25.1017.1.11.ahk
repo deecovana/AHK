@@ -1,7 +1,7 @@
 ;-=-\ Let's intro \-=-
-;ver 23.1129.1
+;ver 25.1017.1.11
 ;for AHK 1.1.34.04
-;by cheva (c) MIT 2012-2024
+;by cheva (c) MIT 2012-2025
 
 ;-=-\ Set globals \-=-
 global SMin = 200
@@ -47,12 +47,6 @@ $^+W::
   Sleep, 1000
   ExitApp
 Return
-
-;Steam {PrintScreen}
-$PrintScreen::
-  Send, {PrintScreen}
-  Send, {F12}
-return
 
 ;-----Let's play!-----
 ; Emergency process kill
@@ -103,13 +97,13 @@ $^+RButton::
 	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
 return
 
-; View 
+; Fixed Camera to mouse
 $^+MButton::
 	Send, {LAlt Down}
 	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
 return
 
-; View and Run
+; Fixed Camera and Run
 $!Space::
 	Send, {LAlt Up}
 	Sleep, 200
@@ -119,13 +113,13 @@ $!Space::
 	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
 return
 
-;move
+; Always move
 $!W::
   SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
   Send, {W Down}
 Return
 
-; Zoom 100%
+; Zoom In 100% and Out
 $^CapsLock::
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
@@ -142,7 +136,7 @@ $^CapsLock::
 	Send, {LControl Up}
 return
 
-; Release all keys
+; Release all fixed keys
 $^BackSpace::
 	Send, {BackSpace}
 	SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
