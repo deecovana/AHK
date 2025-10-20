@@ -1,5 +1,5 @@
 ;-=-\ Let's intro \-=-
-;ver 25.1017.1.11
+;ver 25.1017.1.12
 ;for AHK 1.1.34.04
 ;by cheva (c) MIT 2012-2025
 
@@ -117,6 +117,12 @@ return
 $!W::
   SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
   Send, {W Down}
+Return
+
+; Always move
+$!S::
+  SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+  Send, {S Down}
 Return
 
 ; Zoom In 100% and Out
