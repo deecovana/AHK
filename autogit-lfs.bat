@@ -1,4 +1,5 @@
 git lfs install
+git config lfs.allowincompletepush true
 git lfs track *.zip
 git lfs track *.7z
 git lfs track *.glb
