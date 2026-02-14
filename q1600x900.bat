@@ -1,5 +1,5 @@
-C:\Programs\QRes.exe /x:1280 /y:800
+C:\Programs\QRes.exe /x:1600 /y:900
 @echo ----------------------
-@echo WXGA 16x10    1280x800
+@echo HD+ 16x9      1600x900
 @echo ----------------------
 @pause
