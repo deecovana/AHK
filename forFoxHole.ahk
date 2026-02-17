@@ -1,7 +1,8 @@
-;-=-\ Let's intro \-=-
-;ver 25.1017.1.11
+;ver 26.02
 ;for AHK 1.1.34.04
-;by cheva (c) MIT 2012-2025
+;by cheva (c) MIT 2012-2024
+
+#SingleInstance Force
 
 ;-=-\ Set globals \-=-
 global SMin = 200
@@ -48,13 +49,13 @@ $^+W::
   ExitApp
 Return
 
-;-----Let's play!-----
 ; Emergency process kill
 ;$^F1::
 ;	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 ;	Process,Close,svchost.exe
 ;return
 
+;-----Let's play!-----
 ;; Enable mouse clicker (Shift-Click, random time 200-400 msec, return to current mouse position)
 $^+C::
 	Send, {^+C}
@@ -117,6 +118,12 @@ return
 $!W::
   SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
   Send, {W Down}
+Return
+
+; Always move
+$!S::
+  SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
+  Send, {S Down}
 Return
 
 ; Zoom In 100% and Out

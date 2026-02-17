@@ -1,7 +1,9 @@
 ;-=-\ Let's intro \-=-
-;ver 23.1129.1
+;ver 26.02
 ;for AHK 1.1.34.04
 ;by cheva (c) MIT 2012-2024
+
+#SingleInstance Force
 
 ;-=-\ Set globals \-=-
 global MouseSpeed = % ran(1, 20)
@@ -49,10 +51,10 @@ $PrintScreen::
   Send, {F12}
 return
 
-;-----Let's play!-----
 ; Emergency exit
 $^F1::Process,Close,MyGameProcessNameHere.exe
 
+;-----Let's play!-----
 ;enable mouse clicker (random time 1-10 sec, current mouse position)
 $^+C::
 	Send, {^!C}
