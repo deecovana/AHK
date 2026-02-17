@@ -44,7 +44,7 @@ clkView(pos:=1)
 		MouseGetPos, OrigX, OrigY
 		MouseMove, %lft%, %top%, %MouseSpeed%
 		MouseClick, left, , 
-		SoundPlay %A_WinDir%\Media\Windows Navigation Start.wav
+		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
 		MouseMove, %OrigX%, %OrigY%, %MouseSpeed%
 	}
 }
@@ -62,7 +62,7 @@ clkLocked(pos:=1)
 		MouseClick, left, , 
 		;Sleep, 100
 		;MouseClick, left, , 
-		SoundPlay %A_WinDir%\Media\Windows Navigation Start.wav
+		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
 		MouseMove, %OrigX%, %OrigY%, %MouseSpeed%
 	}
 }
@@ -81,7 +81,7 @@ showPositions(count:=2)
 }
 
 ;-=-\ Init \-=-
-SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 
 ;reload
 $^+R::
@@ -104,7 +104,7 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay %A_WinDir%\Media\Windows Logoff Sound.wav
+  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
   Sleep, 1000
   ExitApp
 Return
@@ -114,7 +114,7 @@ Return
 $^+C::
 	Send, {^!C}
 	MouseGetPos, ClickX, ClickY
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	Loop
 	{
 		if (BreakLoop == 1)
@@ -124,7 +124,7 @@ $^+C::
 		}
 		MouseGetPos, OrigX, OrigY
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay %A_WinDir%\Media\Windows Navigation Start.wav
+		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
 		MouseMove, %OrigX%, %OrigY%
 		Sleep, % ran(3000, 9000)
 	}
@@ -134,7 +134,7 @@ return
 $^+A::
 	Send, {^!A}
 	StopKeys = 0
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	showPositions(2)
 return
 

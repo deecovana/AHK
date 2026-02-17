@@ -15,7 +15,7 @@ ran(min, max)
 }
 
 ;-=-\ Init \-=-
-SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 
 ;reload
 $^+R::
@@ -38,7 +38,7 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay %A_WinDir%\Media\Windows Logoff Sound.wav
+  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
   Sleep, 1000
   ExitApp
 Return
@@ -57,7 +57,7 @@ $^F1::Process,Close,MyGameProcessNameHere.exe
 $^+C::
 	Send, {^!C}
 	MouseGetPos, ClickX, ClickY
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	Sleep, 1000
 	Loop
 	{
@@ -68,7 +68,7 @@ $^+C::
 		}
 		MouseGetPos, OrigX, OrigY
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay %A_WinDir%\Media\Windows Navigation Start.wav
+		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
 		MouseMove, %OrigX%, %OrigY%
 		Sleep, % ran(1000, 9000)
 		global MouseSpeed = % ran(1, 20)

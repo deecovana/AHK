@@ -1,7 +1,7 @@
 ;for AHK 1.1.34.04
 ;by cheva (c) MIT 2012-2022
 
-SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 
 ;reload
 ;$^+R::Reload
@@ -22,7 +22,7 @@ SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
 ;exit
 ;$^+W::
 ;  Send, {^+W}
-;  SoundPlay %A_WinDir%\Media\Windows Logoff Sound.wav
+;  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
 ;  Sleep, 1000
 ;  ExitApp
 ;return

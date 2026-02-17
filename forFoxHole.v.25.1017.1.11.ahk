@@ -20,7 +20,7 @@ ran(min, max)
 }
 
 ;-=-\ Init \-=-
-SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 
 ;reload
 $^+R::
@@ -43,7 +43,7 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay %A_WinDir%\Media\Windows Logoff Sound.wav
+  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
   Sleep, 1000
   ExitApp
 Return
@@ -51,7 +51,7 @@ Return
 ;-----Let's play!-----
 ; Emergency process kill
 ;$^F1::
-;	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+;	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 ;	Process,Close,svchost.exe
 ;return
 
@@ -59,7 +59,7 @@ Return
 $^+C::
 	Send, {^+C}
 	MouseGetPos, ClickX, ClickY
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	Sleep, 500
 	Loop
 	{
@@ -71,7 +71,7 @@ $^+C::
 		MouseGetPos, OrigX, OrigY
 		Send, {LShift Down}
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay %A_WinDir%\Media\Windows Navigation Start.wav
+		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
 		Send, {LShift Up}
 		MouseMove, %OrigX%, %OrigY%
 		Sleep, % ran(SMin, SMax)
@@ -84,23 +84,23 @@ return
 
 $^+G::
 	Send, {G Down}
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 $^+LButton::
 	Send, {LButton Down}
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 $^+RButton::
 	Send, {RButton Down}
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 ; Fixed Camera to mouse
 $^+MButton::
 	Send, {LAlt Down}
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 ; Fixed Camera and Run
@@ -110,12 +110,12 @@ $!Space::
 	Send, {LAlt Down}
 	Sleep, 200
 	Send, {W Down}
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 ; Always move
 $!W::
-  SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+  SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
   Send, {W Down}
 Return
 
@@ -123,7 +123,7 @@ Return
 $^CapsLock::
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
-	SoundPlay %A_WinDir%\Media\Windows Pop-up Blocked.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	loop 25 {
 		if Zoom {
 			Send, {WheelUp}
@@ -139,7 +139,7 @@ return
 ; Release all fixed keys
 $^BackSpace::
 	Send, {BackSpace}
-	SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
+	SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 	Send, {LShift Up}
 	Send, {LAlt Up}
 	Send, {LControl Up}
