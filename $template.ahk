@@ -1,12 +1,16 @@
-;-=-\ Let's intro \-=-
-;ver 26.02
-;for AHK 1.1.34.04
-;by cheva (c) MIT 2012-2024
+;; ver 26.02
+;; for AHK 1.1.34.04
+;; (C) CC3 by cheva MIT 2012-2026
 
 #SingleInstance Force
 
 ;-=-\ Set globals \-=-
-global MouseSpeed = % ran(1, 20)
+global SMin = 200
+global SMax = 600
+global MMin = 2
+global MMax = 6
+global Zoom = false
+MouseSpeed = % ran(MMin, MMax)
 SetDefaultMouseSpeed, MouseSpeed
 
 ;-=-\ Functions \-=-
@@ -17,13 +21,10 @@ ran(min, max)
 }
 
 ;-=-\ Init \-=-
-SoundPlay C:\Windows\Media\Windows Message Nudge.wav
+SoundPlay, %A_WinDir%\Media\Windows Message Nudge.wav
 
 ;reload
-$^+R::
-  Reload
-Return
-
+$^+R::Reload
 ;suspend/resume
 $^+S::
 ;pause/resume
@@ -40,21 +41,20 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
+  SoundPlay, %A_WinDir%\Media\Windows Logoff Sound.wav
   Sleep, 1000
   ExitApp
 Return
-
-;Steam {PrintScreen}
-$PrintScreen::
-  Send, {PrintScreen}
-  Send, {F12}
-return
-
-; Emergency exit
-$^F1::Process,Close,MyGameProcessNameHere.exe
-
+  
+; Emergency process kill
+;$^F1::
+;	SoundPlay, %A_WinDir%\Media\Windows Pop-up Blocked.wav
+;	Process,Close,svchost.exe
+;return
+     
 ;-----Let's play!-----
+;;=======================================================================
+
 ;enable mouse clicker (random time 1-10 sec, current mouse position)
 $^+C::
 	Send, {^!C}

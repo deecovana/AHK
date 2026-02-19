@@ -1,6 +1,6 @@
-;ver 26.02
-;for AHK 1.1.34.04
-;by cheva ("C) MIT 2012-2024
+;; ver 26.02
+;; for AHK 1.1.34.04
+;; (C) CC3 by cheva MIT 2012-2026
 
 #SingleInstance Force
 
@@ -25,7 +25,6 @@ SoundPlay, %A_WinDir%\Media\Windows Message Nudge.wav
 
 ;reload
 $^+R::Reload
-
 ;suspend/resume
 $^+S::
 ;pause/resume
@@ -54,8 +53,8 @@ Return
 ;return
      
 ;-----Let's play!-----
-
 ;;=======================================================================
+
 ; 1. Initialize a global variable to track the toggle state ToggleScrollUp := false
 ; 2. Hotkey to start/stop the WheelUp/Down loop
 $~Up::
