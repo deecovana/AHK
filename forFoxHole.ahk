@@ -56,6 +56,52 @@ Return
 ;return
 
 ;-----Let's play!-----
+
+;;=======================================================================
+; Initialize a static variable to track the toggle state
+static ToggleScrollUp := false
+; Hotkey to start/stop the WheelUp/Down loop
+!Up::
+{
+    ; Flip the toggle state
+    ToggleScrollUp := !ToggleScrollUp
+
+    if ToggleScrollUp {
+        ; Start the WheelLoop function, calling it repeatedly every 50 ms
+        SetTimer(WheelLoop, 50)
+    } else {
+        ; Stop the timer
+        SetTimer(WheelLoop, 0)
+    }
+}
+
+!Down::
+{
+    ; Flip the toggle state
+    ToggleScrollUp := !ToggleScrollUp
+
+    if ToggleScrollUp {
+        ; Start the WheelLoop function, calling it repeatedly every 50 ms
+        SetTimer(WheelLoop, 50)
+    } else {
+        ; Stop the timer
+        SetTimer(WheelLoop, 0)
+    }
+}
+
+; Function that sends the {WheelUp} event
+WheelLoop() {
+    ; Send one scroll-up event
+    Send "{WheelUp}"
+    ; An optional short sleep might be needed for reliability in some applications
+    ; Sleep 10 
+}
+
+
+
+
+
+
 ;; Enable mouse clicker (Shift-Click, random time 200-400 msec, return to current mouse position)
 $^+C::
 	Send, {^+C}
@@ -159,3 +205,43 @@ $^BackSpace::
 	}
 	Reload
 return
+
+;;=======================================================================
+; Initialize a static variable to track the toggle state
+static ToggleScrollUp := false
+; Hotkey to start/stop the loop
+!Up::
+{
+    ; Flip the toggle state
+    ToggleScrollUp := !ToggleScrollUp
+
+    if ToggleScrollUp {
+        ; Start the WheelLoop function, calling it repeatedly every 50 ms
+        SetTimer(WheelLoop, 50)
+    } else {
+        ; Stop the timer
+        SetTimer(WheelLoop, 0)
+    }
+}
+
+!Down::
+{
+    ; Flip the toggle state
+    ToggleScrollUp := !ToggleScrollUp
+
+    if ToggleScrollUp {
+        ; Start the WheelLoop function, calling it repeatedly every 50 ms
+        SetTimer(WheelLoop, 50)
+    } else {
+        ; Stop the timer
+        SetTimer(WheelLoop, 0)
+    }
+}
+
+; Function that sends the {WheelUp} event
+WheelLoop() {
+    ; Send one scroll-up event
+    Send "{WheelUp}"
+    ; An optional short sleep might be needed for reliability in some applications
+    ; Sleep 10 
+}
