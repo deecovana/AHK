@@ -1,8 +1,10 @@
 ;ver 26.02
 ;for AHK 1.1.34.04
-;by cheva ("C) MIT 2012-2024
+;by cheva (c) MIT 2012-2024
 
 #SingleInstance Force
+
+global ToggleScrollUp := false
 
 ;-=-\ Set globals \-=-
 global SMin = 200
@@ -21,10 +23,12 @@ ran(min, max)
 }
 
 ;-=-\ Init \-=-
-SoundPlay, %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 
 ;reload
-$^+R::Reload
+$^+R::
+  Reload
+Return
 
 ;suspend/resume
 $^+S::
@@ -42,37 +46,64 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay, %A_WinDir%\Media\Windows Logoff Sound.wav
+  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
   Sleep, 1000
   ExitApp
 Return
-  
+
 ; Emergency process kill
 ;$^F1::
-;	SoundPlay, %A_WinDir%\Media\Windows Pop-up Blocked.wav
+;	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 ;	Process,Close,svchost.exe
 ;return
-     
+
 ;-----Let's play!-----
 
 ;;=======================================================================
 ; 1. Initialize a global variable to track the toggle state ToggleScrollUp := false
 ; 2. Hotkey to start/stop the WheelUp/Down loop
 $~Up::
-SoundPlay, %A_WinDir%\Media\Speech On.wav
-  Loop, 5
-  {
-    Send, {WheelUp}
-  }
-return
+{
+    ; Flip the toggle state
+    ToggleScrollUp := !ToggleScrollUp
 
-$~Down:: 
-SoundPlay, %A_WinDir%\Media\Speech On.wav
-  Loop, 5
-  {
-    Send, {WheelDown}
-  }
-return
+    if ToggleScrollUp {
+        ; Start the WheelLoop function, calling it repeatedly every 50 ms
+        SetTimer, WheelLoopUp, 50
+    } else {
+        ; Stop the timer
+        SetTimer, WheelLoopUp, Off
+    }
+}
+
+$~Down::
+{
+    ; Flip the toggle state
+    ToggleScrollUp := !ToggleScrollUp
+
+    if ToggleScrollUp {
+        ; Start the WheelLoop function, calling it repeatedly every 50 ms
+        SetTimer, WheelLoopDown, 50
+    } else {
+        ; Stop the timer
+        SetTimer, WheelLoopDown, Off
+    }
+}
+
+; Function that sends the {WheelUp} event
+WheelLoopUp() {
+    ; Send one scroll-up event
+    Send "{WheelUp}"
+    ; An optional short sleep might be needed for reliability in some applications
+    ; Sleep 10 
+}
+
+WheelLoopDown() {
+    ; Send one scroll-up event
+    Send "{WheelDown}"
+    ; An optional short sleep might be needed for reliability in some applications
+    ; Sleep 10 
+}
 
 
 
@@ -83,7 +114,7 @@ return
 $^+C::
 	Send, {^+C}
 	MouseGetPos, ClickX, ClickY
-	SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	Sleep, 500
 	Loop
 	{
@@ -95,7 +126,7 @@ $^+C::
 		MouseGetPos, OrigX, OrigY
 		Send, {LShift Down}
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay, %A_WinDir%\Media\Speech On.wav
+		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
 		Send, {LShift Up}
 		MouseMove, %OrigX%, %OrigY%
 		Sleep, % ran(SMin, SMax)
@@ -108,23 +139,23 @@ return
 
 $^+G::
 	Send, {G Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 $^+LButton::
 	Send, {LButton Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 $^+RButton::
 	Send, {RButton Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 ; Fixed Camera to mouse
 $^+MButton::
 	Send, {LAlt Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 ; Fixed Camera and Run
@@ -134,18 +165,18 @@ $!Space::
 	Send, {LAlt Down}
 	Sleep, 200
 	Send, {W Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 return
 
 ; Always move
 $!W::
-  SoundPlay, %A_WinDir%\Media\Speech Off.wav
+  SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
   Send, {W Down}
 Return
 
 ; Always move
 $!S::
-  SoundPlay, %A_WinDir%\Media\Speech Off.wav
+  SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
   Send, {S Down}
 Return
 
@@ -153,7 +184,7 @@ Return
 $^CapsLock::
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
 	loop 25 {
 		if Zoom {
 			Send, {WheelUp}
@@ -169,7 +200,7 @@ return
 ; Release all fixed keys
 $^BackSpace::
 	Send, {BackSpace}
-	SoundPlay, %A_WinDir%\Media\Windows Message Nudge.wav
+	SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 	Send, {LShift Up}
 	Send, {LAlt Up}
 	Send, {LControl Up}
