@@ -94,7 +94,7 @@ $^+C::
 		MouseGetPos, OrigX, OrigY
 		Send, {LShift Down}
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay, %A_WinDir%\Media\Speech On.wav
+		SoundPlay, %A_WinDir%\Media\Speech Off.wav
 		Send, {LShift Up}
 		MouseMove, %OrigX%, %OrigY%
 		Sleep, % ran(SMin, SMax)
@@ -107,23 +107,23 @@ return
 
 $^+G::
 	Send, {G Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 return
 
 $^+LButton::
 	Send, {LButton Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 return
 
 $^+RButton::
 	Send, {RButton Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 return
 
 ; Fixed Camera to mouse
 $^+MButton::
 	Send, {LAlt Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 return
 
 ; Fixed Camera and Run
@@ -133,18 +133,18 @@ $!Space::
 	Send, {LAlt Down}
 	Sleep, 200
 	Send, {W Down}
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 return
 
 ; Always move
 $!W::
-  SoundPlay, %A_WinDir%\Media\Speech Off.wav
+  SoundPlay, %A_WinDir%\Media\Speech On.wav
   Send, {W Down}
 Return
 
 ; Always move
 $!S::
-  SoundPlay, %A_WinDir%\Media\Speech Off.wav
+  SoundPlay, %A_WinDir%\Media\Speech On.wav
   Send, {S Down}
 Return
 
@@ -152,7 +152,7 @@ Return
 $^CapsLock::
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
-	SoundPlay, %A_WinDir%\Media\Speech Off.wav
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 	loop 25 {
 		if Zoom {
 			Send, {WheelUp}
