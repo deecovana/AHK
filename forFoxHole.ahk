@@ -153,14 +153,14 @@ $^CapsLock::
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
 	SoundPlay, %A_WinDir%\Media\Speech On.wav
-	loop 25 {
+	loop 50 {
 		if Zoom {
 			Send, {WheelUp}
 		}
 		else {
 			Send, {WheelDown}
 		}
-		Sleep, 40
+		Sleep, 50
 	}
 	Send, {LControl Up}
 return
