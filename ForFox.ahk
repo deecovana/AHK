@@ -1,4 +1,4 @@
-;; ver 26.02
+;; ver 26.03
 ;; for AHK 1.1.34.04
 ;; (CC3 2026) cheva 2012-2026
 
@@ -55,35 +55,17 @@ Return
 ;-----Let's play!-----
 ;;=======================================================================
 
-; 1. Initialize a global variable to track the toggle state ToggleScrollUp := false
-; 2. Hotkey to start/stop the WheelUp/Down loop
-$~Up::
-SoundPlay, %A_WinDir%\Media\Speech On.wav
-  Loop, 5
-  {
-    Send, {WheelUp}
-  }
-return
+; Initialize a global variables to track the toggle state 
+ExampleFlag := false
 
-$~Down:: 
-SoundPlay, %A_WinDir%\Media\Speech On.wav
-  Loop, 5
-  {
-    Send, {WheelDown}
-  }
-return
-
-
-
-
-
-
-;; Enable mouse clicker (Shift-Click, random time 200-400 msec, return to current mouse position)
+; Enable mouse clicker (as Shift-Click, random time 200-400 msec, return to current mouse position)
+; Press Shift + Control + C over the position to click
+; Than You have 1 second to move mouse to other position, as Tabs on Train wagons to switch it when not moving
 $^+C::
 	Send, {^+C}
 	MouseGetPos, ClickX, ClickY
 	SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
-	Sleep, 500
+	Sleep, 1000
 	Loop
 	{
 		if (BreakLoop == 1)
@@ -103,72 +85,11 @@ $^+C::
 	}
 return
 
-;; Hold keys Down
-
-$^+G::
-	Send, {G Down}
+; Release all physical fixed keys and Reload script
+; Use Alt/Shift + Backspace
+$+BackSpace::
+$!BackSpace::
 	SoundPlay, %A_WinDir%\Media\Speech On.wav
-return
-
-$^+LButton::
-	Send, {LButton Down}
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
-return
-
-$^+RButton::
-	Send, {RButton Down}
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
-return
-
-; Fixed Camera to mouse
-$^+MButton::
-	Send, {LAlt Down}
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
-return
-
-; Fixed Camera and Run
-$!Space::
-	Send, {LAlt Up}
-	Sleep, 200
-	Send, {LAlt Down}
-	Sleep, 200
-	Send, {W Down}
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
-return
-
-; Always move
-$!W::
-  SoundPlay, %A_WinDir%\Media\Speech On.wav
-  Send, {W Down}
-Return
-
-; Always move
-$!S::
-  SoundPlay, %A_WinDir%\Media\Speech On.wav
-  Send, {S Down}
-Return
-
-; Zoom In 100% and Out
-$^CapsLock::
-	Send, {LControl Down}
-	global Zoom = not(Zoom)
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
-	loop 50 {
-		if Zoom {
-			Send, {WheelUp}
-		}
-		else {
-			Send, {WheelDown}
-		}
-		Sleep, 50
-	}
-	Send, {LControl Up}
-return
-
-; Release all fixed keys
-$^BackSpace::
-	Send, {BackSpace}
-	SoundPlay, %A_WinDir%\Media\Windows Message Nudge.wav
 	Send, {LShift Up}
 	Send, {LAlt Up}
 	Send, {LControl Up}
@@ -182,8 +103,91 @@ $^BackSpace::
 	Reload
 return
 
+; Use Fixed Mouse Buttons to harvest, fixed camera etc.
+; Hold Left Button to harvest or build
+; Use Control + Shift + Left Click
+$^+LButton::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {LButton Down}
+return
+; Middle Button
+; Use Control + Shift + Middle Click
+$^+MButton::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {MButton Down}
+return
+; And Right Button
+; Use Control + Shift + Right Click
+$^+RButton::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {RButton Down}
+return
 
+; Use fixed camera
+; Need to set up keys in FoxHole: Alt to fixed camera
+; Use Alt + Space for run forward to fixed camera
+$!Space::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {LAlt Up}
+	Sleep, 50
+	Send, {LAlt Down}
+	Sleep, 50
+	Send, {W Down}
+return
+
+; Use Ctrl+Space for Sambra gunner fixed camera
+; Need to set up keys in FoxHole: Alt to fixed camera
 $^Space::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
 	Send, {RButton Down}
 	Send, {LAlt Down}
 return
+
+; Use Up and Down keys to change Sambra or Flack Attitude to +- 1 meter
+; Need to set up attitude keys to WheelUp/WheelDown
+$~Up::
+SoundPlay, %A_WinDir%\Media\Speech On.wav
+  Loop, 5
+  {
+    Send, {WheelUp}
+  }
+return
+; And down
+$~Down:: 
+SoundPlay, %A_WinDir%\Media\Speech On.wav
+  Loop, 5
+  {
+    Send, {WheelDown}
+  }
+return
+
+; Use Alt + W/S - Always move
+; Forward
+$!W::
+  SoundPlay, %A_WinDir%\Media\Speech On.wav
+  Send, {W Down}
+return
+; And backward
+$!S::
+  SoundPlay, %A_WinDir%\Media\Speech On.wav
+  Send, {S Down}
+return
+
+; Use Control + CapsLock: Zoom In/Out 100%
+; Need to set up keys in FoxHole: Zoom on Wheel Up/Down
+$^CapsLock::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {LControl Down}
+	global Zoom = not(Zoom)
+	loop 50 {
+		if Zoom {
+			Send, {WheelUp}
+		}
+		else {
+			Send, {WheelDown}
+		}
+		Sleep, 20
+	}
+	Send, {LControl Up}
+return
+

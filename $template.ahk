@@ -1,4 +1,4 @@
-;; ver 26.02
+;; ver 26.03
 ;; for AHK 1.1.34.04
 ;; (CC3 2026) cheva 2012-2026
 
@@ -55,11 +55,16 @@ Return
 ;-----Let's play!-----
 ;;=======================================================================
 
-;enable mouse clicker (random time 1-10 sec, current mouse position)
+; Initialize a global variables to track the toggle state 
+ExampleFlag := false
+
+; Enable mouse clicker (as Shift-Click, random time 200-400 msec, return to current mouse position)
+; Press Shift + Control + C over the position to click
+; Than You have 1 second to move mouse to other position, as Tabs on Train wagons to switch it when not moving
 $^+C::
-	Send, {^!C}
+	Send, {^+C}
 	MouseGetPos, ClickX, ClickY
-	SoundPlay C:\Windows\Media\Windows Pop-up Blocked.wav
+	SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
 	Sleep, 1000
 	Loop
 	{
@@ -69,11 +74,51 @@ $^+C::
 			break
 		}
 		MouseGetPos, OrigX, OrigY
+		Send, {LShift Down}
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay C:\Windows\Media\Windows Navigation Start.wav
+		SoundPlay, %A_WinDir%\Media\Speech Off.wav
+		Send, {LShift Up}
 		MouseMove, %OrigX%, %OrigY%
-		Sleep, % ran(1000, 9000)
-		global MouseSpeed = % ran(1, 20)
+		Sleep, % ran(SMin, SMax)
+		MouseSpeed = % ran(MMin, MMax)
 		SetDefaultMouseSpeed, MouseSpeed
 	}
+return
+
+; Release all physical fixed keys and Reload script
+; Use Alt/Shift + Backspace
+$+BackSpace::
+$!BackSpace::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {LShift Up}
+	Send, {LAlt Up}
+	Send, {LControl Up}
+	Send, {LButton Up}
+	Send, {RButton Up}
+	Send, {MButton Up}
+	Loop, 0xFF {
+		IF GetKeyState(Key:=Format("VK{:X}",A_Index))
+			SendInput, {%Key% up}
+	}
+	Reload
+return
+
+; Use Fixed Mouse Buttons to harvest, fixed camera etc.
+; Hold Left Button to harvest or build
+; Use Control + Shift + Left Click
+$^+LButton::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {LButton Down}
+return
+; Middle Button
+; Use Control + Shift + Middle Click
+$^+MButton::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {MButton Down}
+return
+; And Right Button
+; Use Control + Shift + Right Click
+$^+RButton::
+	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	Send, {RButton Down}
 return
