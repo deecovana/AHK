@@ -182,3 +182,8 @@ $^BackSpace::
 	Reload
 return
 
+
+$^Space::
+	Send, {RButton Down}
+	Send, {LAlt Down}
+return
