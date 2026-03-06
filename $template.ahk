@@ -1,6 +1,6 @@
 ;; ver 26.03
 ;; for AHK 1.1.34.04
-;; (CC3 2026) cheva 2012-2026
+;; (CC4 2026) cheva 2012-2026
 
 #SingleInstance Force
 
