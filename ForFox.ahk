@@ -21,7 +21,7 @@ ran(min, max)
 }
 
 ;-=-\ Init \-=-
-SoundPlay, %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
 
 ;reload
 $^+R::Reload
@@ -41,10 +41,27 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay, %A_WinDir%\Media\Windows Logoff Sound.wav
+  SoundPlay, %A_WinDir%\Media\Windows Notify System Generic.wav
   Sleep, 1000
   ExitApp
 Return
+
+; Release all physical fixed keys and Reload script
+; Use Alt/Shift + Backspace
+$+BackSpace::
+$!BackSpace::
+	Send, {LShift Up}
+	Send, {LAlt Up}
+	Send, {LControl Up}
+	Send, {LButton Up}
+	Send, {RButton Up}
+	Send, {MButton Up}
+	Loop, 0xFF {
+		IF GetKeyState(Key:=Format("VK{:X}",A_Index))
+			SendInput, {%Key% up}
+	}
+	Reload
+return
   
 ; Emergency process kill
 ;$^F1::
@@ -64,7 +81,7 @@ ExampleFlag := false
 $^+C::
 	Send, {^+C}
 	MouseGetPos, ClickX, ClickY
-	SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Sleep, 1000
 	Loop
 	{
@@ -76,7 +93,7 @@ $^+C::
 		MouseGetPos, OrigX, OrigY
 		Send, {LShift Down}
 		MouseClick, left, %ClickX%, %ClickY%
-		SoundPlay, %A_WinDir%\Media\Speech Off.wav
+		SoundPlay, %A_WinDir%\Media\Windows Default.wav
 		Send, {LShift Up}
 		MouseMove, %OrigX%, %OrigY%
 		Sleep, % ran(SMin, SMax)
@@ -85,41 +102,23 @@ $^+C::
 	}
 return
 
-; Release all physical fixed keys and Reload script
-; Use Alt/Shift + Backspace
-$+BackSpace::
-$!BackSpace::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
-	Send, {LShift Up}
-	Send, {LAlt Up}
-	Send, {LControl Up}
-	Send, {LButton Up}
-	Send, {RButton Up}
-	Send, {MButton Up}
-	Loop, 0xFF {
-		IF GetKeyState(Key:=Format("VK{:X}",A_Index))
-			SendInput, {%Key% up}
-	}
-	Reload
-return
-
 ; Use Fixed Mouse Buttons to harvest, fixed camera etc.
 ; Hold Left Button to harvest or build
 ; Use Control + Shift + Left Click
 $^+LButton::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {LButton Down}
 return
 ; Middle Button
 ; Use Control + Shift + Middle Click
 $^+MButton::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {MButton Down}
 return
 ; And Right Button
 ; Use Control + Shift + Right Click
 $^+RButton::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {RButton Down}
 return
 
@@ -127,7 +126,7 @@ return
 ; Need to set up keys in FoxHole: Alt to fixed camera
 ; Use Alt + Space for run forward to fixed camera
 $!Space::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {LAlt Up}
 	Sleep, 50
 	Send, {LAlt Down}
@@ -138,7 +137,7 @@ return
 ; Use Ctrl+Space for Sambra gunner fixed camera
 ; Need to set up keys in FoxHole: Alt to fixed camera
 $^Space::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {RButton Down}
 	Send, {LAlt Down}
 return
@@ -146,7 +145,7 @@ return
 ; Use Up and Down keys to change Sambra or Flack Attitude to +- 1 meter
 ; Need to set up attitude keys to WheelUp/WheelDown
 $~Up::
-SoundPlay, %A_WinDir%\Media\Speech On.wav
+SoundPlay, %A_WinDir%\Media\Windows Default.wav
   Loop, 5
   {
     Send, {WheelUp}
@@ -154,7 +153,7 @@ SoundPlay, %A_WinDir%\Media\Speech On.wav
 return
 ; And down
 $~Down:: 
-SoundPlay, %A_WinDir%\Media\Speech On.wav
+SoundPlay, %A_WinDir%\Media\Windows Default.wav
   Loop, 5
   {
     Send, {WheelDown}
@@ -169,24 +168,24 @@ $!W::
 return
 ; And backward
 $!S::
-  SoundPlay, %A_WinDir%\Media\Speech On.wav
+  SoundPlay, %A_WinDir%\Media\Speech Off.wav
   Send, {S Down}
 return
 
 ; Use Control + CapsLock: Zoom In/Out 100%
 ; Need to set up keys in FoxHole: Zoom on Wheel Up/Down
 $^CapsLock::
-	SoundPlay, %A_WinDir%\Media\Speech On.wav
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {LControl Down}
 	global Zoom = not(Zoom)
-	loop 50 {
+	loop 40 {
 		if Zoom {
 			Send, {WheelUp}
 		}
 		else {
 			Send, {WheelDown}
 		}
-		Sleep, 20
+		Sleep, 50
 	}
 	Send, {LControl Up}
 return
