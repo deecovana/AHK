@@ -1,4 +1,5 @@
-@pause ARE YOU SHURE??? It will delete ALL LFS files without rollback!!!
+@echo Press Ctrl+C twice to stop!!!
+pause OR this will delete ALL LFS files without rollback!!!
 git lfs fetch --all
 git lfs checkout
 git lfs uninstall
