@@ -3,7 +3,7 @@ set branch=initial
 
 git init -b %branch%
 
-git remote add origin https://github.com/deecovan/%project%.git
+git remote add origin https://github.com/deecovana/%project%.git
 
 git pull origin %branch%
 
