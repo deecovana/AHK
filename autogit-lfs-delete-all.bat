@@ -1,3 +1,4 @@
+@pause ARE YOU SHURE??? It will delete ALL LFS files without rollback!!!
 git lfs fetch --all
 git lfs checkout
 git lfs uninstall
