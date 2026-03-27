@@ -122,13 +122,17 @@ $^+RButton::
 	Send, {RButton Down}
 return
 
+; Always Run on CapsLock
+$~CapsLock:
+	SoundPlay, %A_WinDir%\Media\Windows Background.wav
+	Send, {LShift Down}
+return
+
 ; Use fixed camera
 ; Need to set up keys in FoxHole: Alt to fixed camera
-; Use Alt + Space for run forward to fixed camera
-$!Space::
+; Use Ctrl + Shift + Space for run forward to fixed camera
+$^+Space::
 	SoundPlay, %A_WinDir%\Media\Windows Background.wav
-	Send, {LAlt Up}
-	Sleep, 50
 	Send, {LAlt Down}
 	Sleep, 50
 	Send, {W Down}
