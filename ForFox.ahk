@@ -122,7 +122,7 @@ $^+RButton::
 return
 
 ; Always Run on CapsLock
-$~CapsLock:
+$~CapsLock::
 	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {LShift Down}
 return
