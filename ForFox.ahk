@@ -40,7 +40,6 @@ Return
 
 ;exit
 $^+W::
-  Send, {^+W}
   SoundPlay, %A_WinDir%\Media\Windows Notify System Generic.wav
   Sleep, 1000
   ExitApp
