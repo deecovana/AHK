@@ -1,4 +1,4 @@
-;; ver 26.03
+;; ver 26.04.02
 ;; for AHK 1.1.34.04
 ;; (CC4 2026) cheva 2012-2026
 
@@ -25,6 +25,7 @@ SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
 
 ;reload
 $^+R::Reload
+
 ;suspend/resume
 $^+S::
 ;pause/resume
@@ -72,7 +73,7 @@ return
 ;;=======================================================================
 
 ; Initialize a global variables to track the toggle state 
-ExampleFlag := false
+BreakLoop := 0
 
 ; Enable mouse clicker (as Shift-Click, random time 200-400 msec, return to current mouse position)
 ; Press Shift + Control + C over the position to click
@@ -120,18 +121,23 @@ $^+RButton::
 	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {RButton Down}
 return
-; Run and E loop
+; Run and press `e` loop
 $+E::
-	if (BreakLoop == 1)
+	Loop
 	{
-		Send, {e down}
-		BreakLoop = 0
-		return
+		if (BreakLoop == 1)
+		{
+			BreakLoop = 0
+			break
+		}
+		Send, {e Down}
+		SoundPlay, %A_WinDir%\Media\Windows Background.wav
+		Sleep, % SMin
+		Send, {e Up}
 	}
-	SoundPlay, %A_WinDir%\Media\Windows Default.wav
-	Send, {e down}
 return
 ; Break Loops
 $^C::
+	SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
 	BreakLoop = 1
 return
