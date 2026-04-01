@@ -122,16 +122,14 @@ $^+RButton::
 return
 ; Run and E loop
 $+E::
-	Loop
+	if (BreakLoop == 1)
 	{
-		if (BreakLoop == 1)
-		{
-			BreakLoop = 0
-			break
-		}
-		Send, {E}
-		Sleep, % ran(SMin, SMax)
+		Send, {e down}
+		BreakLoop = 0
+		return
 	}
+	SoundPlay, %A_WinDir%\Media\Windows Default.wav
+	Send, {e down}
 return
 ; Break Loops
 $^C::
