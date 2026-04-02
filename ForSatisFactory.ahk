@@ -121,8 +121,9 @@ $^+RButton::
 	SoundPlay, %A_WinDir%\Media\Windows Background.wav
 	Send, {RButton Down}
 return
-; Run and press `e` loop
-$+E::
+; Repeat `e` loop
+; Press Shift + Control + E
+$^+E::
 	Loop
 	{
 		if (BreakLoop == 1)
