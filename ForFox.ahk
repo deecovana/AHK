@@ -192,4 +192,8 @@ $^CapsLock::
 	}
 	Send, {LControl Up}
 return
-
+; Break Loops
+$^C::
+	SoundPlay, %A_WinDir%\Media\Windows Foreground.wav
+	BreakLoop = 1
+return
