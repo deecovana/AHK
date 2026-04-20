@@ -50,7 +50,6 @@ Return
 ;; Send to Blender Scale on Z Axis to 0
 $F4::
 	Send, s
-	Sleep, 100
 	Send, z
-	Sleep, 100
 	Send, 0
+	Send, {Enter}
