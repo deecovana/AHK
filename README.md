@@ -1,18 +1,9 @@
-# AHK GitHub repo (CC4 2026)
-- AHK v1.1.33.11 and other stuff
-- @TODO add README for users (use key to open window)
+# POEbuilds GitHub @deecovana repo (CC4 2026)
 
-## 26.05.03 $ForPOE and $template minor changes
-- Modified $ForPOE.ahk Shifft+LButton/RButton to Q key
-- Modified $tempalte explorer demo
+## 26.05.03 Finish Acts
+- MyRage planned 80
+- Modified $ForPOE.ahk Control/Shift + Right click to MButton
 
-## 26/04/03 Move to @deecovana account
-- Saved Adrenalin settings for High Perfomance
-- Tag AMD-HIGH
-
-## 26/02/19
-- Added Hotkey to start/stop the WheelUp/Down loop
-  - ForFoxHole added
-
-## Older wasn't commented
-- Sorry
+## 26.05.02 Begin re-Play POE
+- Added POB folder
+- Added renewed AHK script (use flasks and chat commands)
