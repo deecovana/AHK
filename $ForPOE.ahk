@@ -97,12 +97,12 @@ $^p::
   Send, {Enter}
 
 ; Jump!!!
-; Map MMB ability to jump/move/slide 
-; Control/Shift + Right click: Send Middle Button
+; Map jump/move/slide ability to MMB
+; Control/Shift + Right click: Send MMB
 ; Using: Holding LMB, press Control than RMB
 $^RButton::
 $+RButton::
-  Send, {MButton}
+  Send, MButton
   SoundPlay, %A_WinDir%\Media\Speech Misrecognition.wav
 return
 
