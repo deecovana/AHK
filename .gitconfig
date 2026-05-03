@@ -19,11 +19,19 @@
 	tree  = log --graph --abbrev-commit --decorate --format=format:'%C(bold magenta)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	list = log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=relative
 	files = log --name-status --full-diff --all
-	rc = rm -r --cached .
+	fsize = lfs ls-files -s
+	rc = rm -r --cached .	
 [init]
 	defaultBranch = initial
 [safe]
 	directory = C:/Projects
 	directory = C:/Projects/*
+	directory = C:/Projects/v4-00-cars
+	directory = C:/Projects/unknown-space-uk
 [core]
 	editor = C:/Programs/npp/npp.exe
+[credential]
+	helper = 
+	helper = C:/Program\\ Files\\ \\(x86\\)/Git\\ Credential\\ Manager/git-credential-manager.exe
+[gui]
+	recentrepo = C:/Projects/v4-00-cars

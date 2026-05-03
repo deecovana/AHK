@@ -3,11 +3,11 @@ set branch=initial
 
 git init -b %branch%
 
-git remote add origin https://github.com/deecovan/%project%.git
+git remote add origin https://github.com/deecovana/%project%.git
 
 git pull origin %branch%
 
-echo # %project% GitHub repo >> README.MD
+echo # %project% GitHub @deecovana repo (CC4 2026)>> README.MD
 
 git add -A
 git commit -m "Add README.MD"

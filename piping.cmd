@@ -1,0 +1,10 @@
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t
+start ping 208.67.222.222 -l 1024 -t

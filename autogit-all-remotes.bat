@@ -8,7 +8,7 @@ start autogit Update-remotes-%date%-%TIME: =0%
 cd ..
 pushd .
 )
-timeout /t 5 /nobreak >nul
+timeout /t 30 /nobreak >nul
 for /d %%d in (*.*) DO (
 cd "%%d"
 @echo // in "%%d" \\____________________________

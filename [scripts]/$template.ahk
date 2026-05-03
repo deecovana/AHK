@@ -1,7 +1,7 @@
 ;-=-\ Let's intro \-=-
-;ver 23.1129.1
+;ver 25.0805
 ;for AHK 1.1.34.04
-;by cheva (c) MIT 2012-2024
+;by cheva (c) MIT 2012-2025
 
 ;-=-\ Set globals \-=-
 global MouseSpeed = % ran(1, 20)
@@ -18,9 +18,7 @@ ran(min, max)
 SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
 
 ;reload
-$^+R::
-  Reload
-Return
+$^+R::Reload
 
 ;suspend/resume
 $^+S::

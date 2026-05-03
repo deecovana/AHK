@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Pedalboard2PatchFile>
-  <Patch tempo="120" name="5 lines">
+  <Patch tempo="120" name="Neww-ll">
     <FILTERGRAPH>
-      <FILTER uid="1" x="10" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0">
+      <FILTER uid="1" x="0" y="11" uiLastX="0" uiLastY="0" windowOpen="0" program="0">
         <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
                 manufacturer="Raw Material Software" version="1.0" file="" uid="246006c0"
                 isInstrument="0" fileTime="0" numInputs="0" numOutputs="2"/>
@@ -17,14 +16,14 @@
                 isInstrument="0" fileTime="0" numInputs="0" numOutputs="0"/>
         <STATE>0.</STATE>
       </FILTER>
-      <FILTER uid="3" x="697" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
+      <FILTER uid="3" x="760" y="11" uiLastX="0" uiLastY="0" windowOpen="0"
               program="0">
         <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
                 manufacturer="Raw Material Software" version="1.0" file="" uid="724248cb"
                 isInstrument="0" fileTime="0" numInputs="2" numOutputs="0"/>
         <STATE>0.</STATE>
       </FILTER>
-      <FILTER uid="4" x="96" y="72" uiLastX="0" uiLastY="0" windowOpen="0"
+      <FILTER uid="4" x="10" y="122" uiLastX="0" uiLastY="0" windowOpen="0"
               program="0">
         <PLUGIN name="OSC Input" descriptiveName="Dummy AudioProcessor so we can see at a glance which plugins have OSC mappings."
                 format="Internal" category="Internal" manufacturer="Niall Moody"
@@ -40,92 +39,31 @@
                 numInputs="0" numOutputs="0"/>
         <STATE>0.</STATE>
       </FILTER>
-      <FILTER uid="6" x="289" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
+      <FILTER uid="13" x="111" y="11" uiLastX="10" uiLastY="317" windowOpen="0"
               program="0" oscMIDIAddress="">
-        <PLUGIN name="Level" descriptiveName="Simple level processor." format="Internal"
-                category="Pedalboard Processors" manufacturer="Niall Moody" version="1.00"
-                file="" uid="45eab64" isInstrument="0" fileTime="0" numInputs="2"
-                numOutputs="2"/>
-        <STATE>103.VMjLgzE....OPUFYgwlXuElbjICSkYWYrMUYzQWZtc1bfvVY1UFa8HBLtHCN4.iMxTiHfTFYoQ2axgUOh.iHfTFYoQ2axkUOh.iHfTFYoQ2axcUOh.iHfTFYoQ2axgTOh.iHu3C.vA</STATE>
-      </FILTER>
-      <FILTER uid="9" x="395" y="10" uiLastX="10" uiLastY="220" windowOpen="1"
-              program="0" oscMIDIAddress="">
-        <PLUGIN name="reaxcomp-standalone" descriptiveName="ReaXcomp (ReaPlugs Edition)"
+        <PLUGIN name="reacomp-standalone" descriptiveName="ReaComp (ReaPlugs Edition)"
                 format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
-                file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaxcomp-standalone.dll"
-                uid="72657863" isInstrument="0" fileTime="15204a50670" numInputs="2"
+                file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reacomp-standalone.dll"
+                uid="7265636d" isInstrument="0" fileTime="15204a5e900" numInputs="4"
                 numOutputs="2"/>
-        <STATE>468.CMlaKA....fQBMDZ....AHWY3MF..P.S....A.............................................................................................................................................................................P.zfC...PA............oAD........7+Pnl6qsqQD7OF.......3.D..........7....fk....E....DA...........dg.A........+ODIzLOmaBf+i........L.A..........O....XI...PA....Q....fdvtT4uvEJP........v+C........7+H++++++++AP..........vC....VB...T....PD...........bWCD........7+.DbceXdS.8OO.......P.D..........7....fk....E....DA..........vIt.A........+O........v+i........D.A..........O....XI...PA....Q....D....P.....i+++++++u+C.....</STATE>
+        <STATE>288.CMlaKA....fQ3IzZ....AHWYi0F..P.S....A...........................................................................................................................................................................CMlaKA....fQ3MzZ....AHWYi0F..P.S....S.....................................fO0ppF9jrrswynWq.OidsB7L50J.....vO.B..................ybPzb9C.M4L.....7Lx0J.....vO.B..+.H..7Cf..vOwrCE</STATE>
       </FILTER>
-      <FILTER uid="10" x="183" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
+      <FILTER uid="14" x="608" y="11" uiLastX="440" uiLastY="190" windowOpen="0"
               program="0" oscMIDIAddress="">
-        <PLUGIN name="Level" descriptiveName="Simple level processor." format="Internal"
-                category="Pedalboard Processors" manufacturer="Niall Moody" version="1.00"
-                file="" uid="45eab64" isInstrument="0" fileTime="0" numInputs="2"
+        <PLUGIN name="reaeq-standalone" descriptiveName="ReaEQ (ReaPlugs Edition)"
+                format="VST" category="Effect" manufacturer="Cockos" version="V4.76"
+                file="C:\Program Files (x86)\VSTPlugins\ReaPlugs\reaeq-standalone.dll"
+                uid="72656571" isInstrument="0" fileTime="15204a5aa80" numInputs="2"
                 numOutputs="2"/>
-        <STATE>103.VMjLgzE....OPUFYgwlXuElbjICSkYWYrMUYzQWZtc1bfvVY1UFa8HBLtHCN4.iMxTiHfTFYoQ2axgUOh.iHfTFYoQ2axkUOh.iHfTFYoQ2axcUOh.iHfTFYoQ2axgTOh.iHu3C.xA</STATE>
+        <STATE>287.CMlaKA....fQBMDZ....AHWYkEG..P.S....A...............................................................................................................................................................................+EB...v..........D....PpSH7.YW9X.YBra897Gi+O3CXkCsHau+S.H....D....vx5dcnvKqi.83pnqdemZ9OC.......P.T.A....D....vDCgcg.O3o.cQuY+3pbR+OO.qbnEY6C.T.A....D.............7+......</STATE>
       </FILTER>
-      <FILTER uid="11" x="592" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0" oscMIDIAddress="">
-        <PLUGIN name="Level" descriptiveName="Simple level processor." format="Internal"
-                category="Pedalboard Processors" manufacturer="Niall Moody" version="1.00"
-                file="" uid="45eab64" isInstrument="0" fileTime="0" numInputs="2"
-                numOutputs="2"/>
-        <STATE>97.VMjLgbE....OPUFYgwlXuElbjICSkYWYrMUYzQWZtc1bfvVY1UFa8HBLtTiHfTFYoQ2axgUOh.iHfTFYoQ2axkUOh.iHfTFYoQ2axcUOh.iHfTFYoQ2axgTOh.iHu3C.RC</STATE>
-      </FILTER>
-      <CONNECTION srcFilter="1" srcChannel="1" dstFilter="6" dstChannel="1"/>
-      <CONNECTION srcFilter="1" srcChannel="0" dstFilter="10" dstChannel="0"/>
+      <CONNECTION srcFilter="1" srcChannel="0" dstFilter="13" dstChannel="0"/>
+      <CONNECTION srcFilter="1" srcChannel="1" dstFilter="13" dstChannel="1"/>
       <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="5" dstChannel="4096"/>
-      <CONNECTION srcFilter="6" srcChannel="1" dstFilter="9" dstChannel="1"/>
-      <CONNECTION srcFilter="9" srcChannel="0" dstFilter="11" dstChannel="0"/>
-      <CONNECTION srcFilter="9" srcChannel="1" dstFilter="11" dstChannel="1"/>
-      <CONNECTION srcFilter="10" srcChannel="0" dstFilter="9" dstChannel="0"/>
-      <CONNECTION srcFilter="11" srcChannel="0" dstFilter="3" dstChannel="0"/>
-      <CONNECTION srcFilter="11" srcChannel="1" dstFilter="3" dstChannel="1"/>
-    </FILTERGRAPH>
-    <Mappings/>
-    <UserNames/>
-  </Patch>
-  <Patch tempo="120" name="2 - &lt;untitled&gt;">
-    <FILTERGRAPH>
-      <FILTER uid="10" x="10" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0">
-        <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
-                manufacturer="Raw Material Software" version="1.0" file="" uid="246006c0"
-                isInstrument="0" fileTime="0" numInputs="0" numOutputs="2"/>
-        <STATE>0.</STATE>
-      </FILTER>
-      <FILTER uid="11" x="10" y="120" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0">
-        <PLUGIN name="Midi Input" descriptiveName="" format="Internal" category="I/O devices"
-                manufacturer="Raw Material Software" version="1.0" file="" uid="cb5fde0b"
-                isInstrument="0" fileTime="0" numInputs="0" numOutputs="0"/>
-        <STATE>0.</STATE>
-      </FILTER>
-      <FILTER uid="12" x="892" y="10" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0">
-        <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
-                manufacturer="Raw Material Software" version="1.0" file="" uid="724248cb"
-                isInstrument="0" fileTime="0" numInputs="2" numOutputs="0"/>
-        <STATE>0.</STATE>
-      </FILTER>
-      <FILTER uid="13" x="10" y="215" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0">
-        <PLUGIN name="OSC Input" descriptiveName="Dummy AudioProcessor so we can see at a glance which plugins have OSC mappings."
-                format="Internal" category="Internal" manufacturer="Niall Moody"
-                version="1.00" file="" uid="8234cb29" isInstrument="0" fileTime="0"
-                numInputs="0" numOutputs="0"/>
-        <STATE>0.</STATE>
-      </FILTER>
-      <FILTER uid="14" x="100" y="100" uiLastX="0" uiLastY="0" windowOpen="0"
-              program="0">
-        <PLUGIN name="Midi Interceptor" descriptiveName="Hidden Midi Interceptor plugin for mapping MIDI CCs to parameters."
-                format="Internal" category="Internal" manufacturer="Niall Moody"
-                version="1.00" file="" uid="8d4c17a6" isInstrument="1" fileTime="0"
-                numInputs="0" numOutputs="0"/>
-        <STATE>0.</STATE>
-      </FILTER>
-      <CONNECTION srcFilter="11" srcChannel="4096" dstFilter="14" dstChannel="4096"/>
+      <CONNECTION srcFilter="13" srcChannel="0" dstFilter="14" dstChannel="0"/>
+      <CONNECTION srcFilter="13" srcChannel="1" dstFilter="14" dstChannel="1"/>
+      <CONNECTION srcFilter="14" srcChannel="0" dstFilter="3" dstChannel="0"/>
+      <CONNECTION srcFilter="14" srcChannel="1" dstFilter="3" dstChannel="1"/>
     </FILTERGRAPH>
     <Mappings/>
     <UserNames/>

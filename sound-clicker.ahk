@@ -1,7 +1,7 @@
 ;for AHK 1.1.34.04
 ;by cheva (c) MIT 2012-2022
 
-SoundPlay %A_WinDir%\Media\Windows Message Nudge.wav
+SoundPlay C:\Windows\Media\Windows Message Nudge.wav
 
 ;reload
 $^+R::Reload
@@ -22,7 +22,7 @@ Return
 ;exit
 $^+W::
   Send, {^+W}
-  SoundPlay %A_WinDir%\Media\Windows Logoff Sound.wav
+  SoundPlay C:\Windows\Media\Windows Logoff Sound.wav
   Sleep, 1000
   ExitApp
 return
@@ -36,7 +36,7 @@ Send, {Enter}
 Sleep, 1000
 Loop, 
 {
-    SoundPlay %A_WinDir%\Media\Windows Navigation Start.wav
+    SoundPlay C:\Windows\Media\Windows Navigation Start.wav
     Sleep, 60000
 }
 

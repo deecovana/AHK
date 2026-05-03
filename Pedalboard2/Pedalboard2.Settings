@@ -77,10 +77,11 @@
               numOutputs="0"/>
     </KNOWNPLUGINS>
   </VALUE>
-  <VALUE name="WindowState" val="1 31 826 214"/>
+  <VALUE name="WindowState" val="1 31 896 260"/>
   <VALUE name="audioDeviceState">
     <DEVICESETUP deviceType="Windows Audio" audioOutputDeviceName="Speaker/HP (Realtek High Definition Audio)"
-                 audioInputDeviceName="Line 1 (Virtual Audio Cable)" audioDeviceRate="48000"/>
+                 audioInputDeviceName="CABLE Output (VB-Audio Virtual Cable)"
+                 audioDeviceRate="48000" audioDeviceBufferSize="320"/>
   </VALUE>
   <VALUE name="lastPluginScanPath_VST" val="C:\Program Files (x86)\VSTPlugins\ReaPlugs"/>
   <VALUE name="listWindowPos" val="490 140 300 400"/>
