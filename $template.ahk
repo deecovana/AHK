@@ -64,12 +64,13 @@ $!BackSpace::
 return
   
 ; Emergency process kill
+     
+;-------Let's play!-------
+;;  #IfWinActive, Explorer ;; Explorer demo
 ;$^F1::
 ;	SoundPlay, %A_WinDir%\Media\Windows Pop-up Blocked.wav
-;	Process,Close,svchost.exe
+;	Process,Close,explorer.exe
 ;return
-     
-;-----Let's play!-----
 ;;=======================================================================
 
 ; Initialize a global variables to track the toggle state 

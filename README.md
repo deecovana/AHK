@@ -2,6 +2,10 @@
 - AHK v1.1.33.11 and other stuff
 - @TODO add README for users (use key to open window)
 
+## 26.05.03 $ForPOE and $template minor changes
+- Modified $ForPOE.ahk Shifft+LButton/RButton to Q key
+- Modified $tempalte explorer demo
+
 ## 26/04/03 Move to @deecovana account
 - Saved Adrenalin settings for High Perfomance
 - Tag AMD-HIGH
