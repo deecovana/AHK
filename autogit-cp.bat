@@ -6,6 +6,5 @@ del C:\windows\q1*.bat /Q
 copy *.bat C:\windows\ /Y
 copy *.cmd C:\windows\ /Y
 copy gamma*.* C:\windows\ /Y
-copy .\[scripts]\*.exe C:\Programs\ /Y
-rem EXE tp /programs
 copy *.exe C:\Programs\ /Y
+copy *.exe C:\Windows\ /Y
