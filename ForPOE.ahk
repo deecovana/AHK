@@ -73,7 +73,7 @@ return
 ;return
      
 ;-----Let's play POE1!-----
-#IfWinActive, Path of Exile 
+; Muted # IfWinActive, Path of Exile 
 ;;=======================================================================
 
 ; Jump to Hideout on F5
