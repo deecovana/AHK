@@ -1,1 +1,1 @@
-git lfs ls-files -s
+git lfs ls-files -s -a
