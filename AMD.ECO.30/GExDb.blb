@@ -1,0 +1,122 @@
+{
+    "": {
+        "Profiles": [
+            {
+                "GPUS": [
+                    {
+                        "AutoGraphicsFeatures": [
+                        ],
+                        "GPUBDF": 1024
+                    }
+                ],
+                "ProfileID": 3,
+                "ProfileName": "Default"
+            },
+            {
+                "GPUS": [
+                    {
+                        "AutoGraphicsFeatures": [
+                        ],
+                        "GPUBDF": 1024
+                    }
+                ],
+                "ProfileID": 1,
+                "ProfileName": "Quality"
+            },
+            {
+                "GPUS": [
+                    {
+                        "AutoGraphicsFeatures": [
+                            58,
+                            63
+                        ],
+                        "GPUBDF": 1024,
+                        "GraphicsFeatures": [
+                            {
+                                "FeatureID": 36,
+                                "FeatureValue": "30"
+                            },
+                            {
+                                "FeatureID": 37,
+                                "FeatureValue": "30"
+                            },
+                            {
+                                "FeatureID": 39,
+                                "FeatureValue": "1"
+                            }
+                        ]
+                    }
+                ],
+                "ProfileID": 2,
+                "ProfileName": "HYPR-RX Eco"
+            },
+            {
+                "GPUS": [
+                    {
+                        "AutoGraphicsFeatures": [
+                        ],
+                        "GPUBDF": 1024,
+                        "GraphicsFeatures": [
+                            {
+                                "FeatureID": 44,
+                                "FeatureValue": "0"
+                            },
+                            {
+                                "FeatureID": 8,
+                                "FeatureValue": "2"
+                            },
+                            {
+                                "FeatureID": 28,
+                                "FeatureValue": "80"
+                            },
+                            {
+                                "FeatureID": 40,
+                                "FeatureValue": "30"
+                            },
+                            {
+                                "FeatureID": 39,
+                                "FeatureValue": "1"
+                            }
+                        ]
+                    }
+                ],
+                "ProfileID": 0,
+                "ProfileName": "Performance"
+            },
+            {
+                "GPUS": [
+                    {
+                        "AutoGraphicsFeatures": [
+                        ],
+                        "GPUBDF": 1024,
+                        "GraphicsFeatures": [
+                            {
+                                "FeatureID": 36,
+                                "FeatureValue": "30"
+                            },
+                            {
+                                "FeatureID": 37,
+                                "FeatureValue": "30"
+                            },
+                            {
+                                "FeatureID": 39,
+                                "FeatureValue": "1"
+                            },
+                            {
+                                "FeatureID": 33,
+                                "FeatureValue": "1"
+                            },
+                            {
+                                "FeatureID": 8,
+                                "FeatureValue": "2"
+                            }
+                        ]
+                    }
+                ],
+                "ProfileID": 4,
+                "ProfileName": "Custom"
+            }
+        ]
+    },
+    "ReleaseVersion": "25.10.43.05"
+}
