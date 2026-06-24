@@ -1,6 +1,7 @@
 # AHK GitHub repo Continued (CC4 2012-2026)
 - AHK v1.1.33.11 and other stuff
 - @TODO add README for users (use key to open window)
+- New CMD's: prop.cmd powerh.cmd poweroff.cmd 
 
 ## 26.05.03 ForPOE new script
 - Basic console commands
